@@ -1,0 +1,138 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: url(images/bg.jpg);
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#app {
+  width: 70%;
+  height: 70vh;
+  display: grid;
+  grid-template-rows: 1fr 1fr 2fr auto;
+  grid-template-columns: 1fr;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 1em;
+  font-size: 20px;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+}
+
+.holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.entry {
+  background: rgba(3, 34, 43, 0.6);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#entryHolder {
+  padding: 10px;
+}
+
+.headline {
+  font-size: 2em;
+}
+.title {
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 15px;
+  background: rgba(3, 34, 43);
+  opacity: 0.6;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label {
+  display: block;
+  font-size: 15px;
+  color: black;
+}
+
+#zip,
+#feelings,
+#generate {
+  display: block;
+  height: 35px;
+  width: 50%;
+  margin: 5px auto;
+  padding: 5px;
+  background: rgb(3, 34, 43);
+  color: white;
+  font-size: 15px;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+#generate {
+  width: 25%;
+  cursor: pointer;
+}
+#feelings {
+  resize: none;
+  height: 70px;
+}
+h1 {
+  font-size: 36px;
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder {
+  /* Firefox, Chrome, Opera */
+  color: grey;
+  font-family: "Oswald", sans-serif;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: grey;
+  font-family: "Oswald", sans-serif;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: grey;
+  font-family: "Oswald", sans-serif;
+}
+
+/* adding responsive for mobile phones */
+@media (max-width: 720px) {
+  body {
+    background: url(images/bgmob.jpg);
+  }
+
+  #app {
+    width: 80%;
+    height: 60vh;
+  }
+}
